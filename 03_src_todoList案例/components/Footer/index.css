@@ -1,0 +1,14 @@
+.todo-footer {
+  border: 1px solid deepskyblue;
+  padding: 10px 0;
+}
+.todo-footer button{
+  float: right;
+  margin-right: 20px;
+  background: rgb(231, 53, 53);
+  color: #fff;
+  outline: none;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+}

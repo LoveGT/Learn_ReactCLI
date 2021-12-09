@@ -1,0 +1,12 @@
+.todo-header {
+  border: 1px solid palegreen;
+  border-radius: 5px;
+  padding: 10px 0;
+}
+.todo-header input{
+  margin-left: 5px;
+  padding: 8px;
+  border-radius: 6px;
+  outline: none;
+  width: 300px;
+}
