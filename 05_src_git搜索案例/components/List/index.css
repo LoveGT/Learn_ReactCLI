@@ -1,0 +1,16 @@
+.list-box {
+  width: 500px;
+  border: 1px solid red;
+  display: inline-grid;
+  grid-gap: 31px;
+  grid-template-columns: repeat(4, 20%);
+  grid-template-rows: repeat(4, 20%);
+}
+.list-box .img-box {
+  border: 1px solid springgreen;
+  display: inline-block;
+  width: 100px;
+}
+.list-box .img-box img {
+  width: 100%;
+}
