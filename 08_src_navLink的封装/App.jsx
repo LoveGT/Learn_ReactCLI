@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route, Routes, Navigate } from "react-router-dom";
+import { NavLink, Route, Routes } from "react-router-dom";
 import "./App.css";
 
 import About from "./pages/About";
@@ -19,13 +19,11 @@ export default class App extends Component {
             <NavLink >HOME</NavLink> */}
             <MyNavLink to="/about">About</MyNavLink>
             <MyNavLink to="/home">Home</MyNavLink>
-            {/* <Test to="/home">Test</Test> */}
           </div>
           <div className="content-text">
             <Routes>
               <Route path="/about" element={<About />} />
               <Route path="/home" element={<Home />} />
-              {/* <Route path="*" element={<Navigate to="Home" />}></Route> */}
             </Routes>
           </div>
         </div>

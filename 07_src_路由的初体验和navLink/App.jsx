@@ -1,10 +1,9 @@
 import React, { Component } from "react";
-import { Route, Routes, Navigate } from "react-router-dom";
+import { NavLink, Route, Routes } from "react-router-dom";
 import "./App.css";
 
-import About from "./pages/About";
-import Home from "./pages/Home";
-import MyNavLink from "./components/MyNavLink";
+import About from "./components/About";
+import Home from "./components/Home";
 
 export default class App extends Component {
   render() {
@@ -15,17 +14,13 @@ export default class App extends Component {
         </div>
         <div className="content">
           <div className="list-group">
-            {/* <NavLink to="/about">ABOUT</NavLink>
-            <NavLink >HOME</NavLink> */}
-            <MyNavLink to="/about">About</MyNavLink>
-            <MyNavLink to="/home">Home</MyNavLink>
-            {/* <Test to="/home">Test</Test> */}
+            <NavLink to="/about">ABOUT</NavLink>
+            <NavLink to="/home">HOME</NavLink>
           </div>
           <div className="content-text">
             <Routes>
               <Route path="/about" element={<About />} />
               <Route path="/home" element={<Home />} />
-              {/* <Route path="*" element={<Navigate to="Home" />}></Route> */}
             </Routes>
           </div>
         </div>
