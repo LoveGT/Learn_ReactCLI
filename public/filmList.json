@@ -1,0 +1,49 @@
+{
+  "status": 0,
+  "data": {
+    "films": [
+      {
+        "filmId": 5386,
+        "name": "我的姐姐",
+        "poster": "https://pic.maizuo.com/usr/movie/75c67d58c49822d782561cdcca65189c.jpg",
+        "grade": 8.8,
+        "region": "中国大陆",
+        "time": 120,
+        "actors": [
+          {
+            "name": "阴若昕",
+            "role": "导演",
+            "avatarAdress": "https://pic.maizuo.com/usr/movie/5c9574f920a21bfea0a35b0557c6dd43.jpg"
+          },
+          {
+            "name": "李连杰",
+            "role": "武术指导",
+            "avatarAdress": "https://pic.maizuo.com/usr/movie/5c9574f920a21bfea0a35b0557c6dd43.jpg"
+          }
+        ],
+        "details": "影片围绕失去父母的姐姐在面对追求个人独立生活还是抚养弟弟的问题上展开了一段细腻感人的亲情故事。"
+      },
+      {
+        "filmId": 5387,
+        "name": "你好，李焕英",
+        "poster": "https://pic.maizuo.com/usr/movie/75c67d58c49822d782561cdcca65189c.jpg",
+        "grade": 8.8,
+        "region": "中国大陆",
+        "time": 120,
+        "actors": [
+          {
+            "name": "贾玲",
+            "role": "导演",
+            "avatarAdress": "https://pic.maizuo.com/usr/movie/5c9574f920a21bfea0a35b0557c6dd43.jpg"
+          },
+          {
+            "name": "张小斐",
+            "role": "主演",
+            "avatarAdress": "https://pic.maizuo.com/usr/movie/5c9574f920a21bfea0a35b0557c6dd43.jpg"
+          }
+        ],
+        "details": "2001年的某一天，刚刚考上大学的贾晓玲（贾玲 饰）经历了人生中的一次大起大落。一心想要成为母亲骄傲的她却因母亲突遭严重意外，而悲痛万分。在贾晓玲情绪崩溃的状态下，竟意外的回到了1981年，并与年轻的母亲李焕英（张小斐 饰）相遇，二人形影不离，宛如闺蜜。与此同时，也结识了一群天真善良的好朋友。晓玲以为来到了这片“广阔天地”，她可以凭借自己超前的思维，让母亲“大有作为”，但结果却让晓玲感到意外......"
+      }
+    ]
+  }
+}

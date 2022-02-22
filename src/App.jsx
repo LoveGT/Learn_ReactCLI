@@ -1,43 +1,39 @@
 import React, { Component } from "react";
-import { Button,DatePicker } from "antd";
-import "antd/dist/antd.css";
-import {
-  WechatOutlined,
-  StarOutlined,
-  StarFilled,
-  StarTwoTone,
-  SearchOutlined
-} from "@ant-design/icons";
+import axios from "axios";
 
-const { RangePicker } = DatePicker
+import FilmItem from "./components/FilmItem";
+import FilmDetail from "./components/FilmDetail";
+
+import "./App.css"
 
 export default class App extends Component {
-  onChange = (data, dataString) => {
-    console.log(data,'data')
-    console.log(dataString,'data')
+  state = {
+    FilmList: [],
+  };
+  componentDidMount() {
+    axios.get("http://localhost:3000/filmList.json").then((res) => {
+      console.log(res.data.data.films);
+      this.setState({
+        FilmList: res.data.data.films,
+        filmDetails: ""
+      });
+    });
+  }
+  handleClick = (value) => {
+    return () => {
+      this.setState({
+        filmDetails: value
+      })
+
+    }
   }
   render() {
     return (
       <div>
-        App...
-        <button>点我</button>
-        <Button type="primary" size="large">
-          Primary Button
-        </Button>
-        <Button type="primary" danger ghost shape="round" icon={<SearchOutlined />}>Search</Button>
-        <WechatOutlined
-          rotate="90"
-          twoToneColor="#eb2f96"
-          style={{ fontSize: "38px" }}
-        />
-        <StarOutlined />
-        <StarFilled />
-        <StarTwoTone twoToneColor="#000" />
-        <hr></hr>
-        <h2>日期组件</h2>
-        <DatePicker onChange={this.onChange}></DatePicker>
-        <h2>时间段组件</h2>
-        <RangePicker></RangePicker>
+        {this.state.FilmList.map((item) => {
+          return <FilmItem {...item } key={item.filmId} handleClick={this.handleClick}></FilmItem>;
+        })}
+        <FilmDetail filmDetails={this.state.filmDetails}></FilmDetail>
       </div>
     );
   }
