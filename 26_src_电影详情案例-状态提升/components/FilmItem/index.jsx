@@ -1,24 +1,14 @@
 import React, { Component } from 'react'
 import "./index.css"
-import PubSub from 'pubsub-js'
 export default class FilmItem extends Component {
-  handleClick2 = (details)=> {
-    PubSub.publish("details", {
-      details
-    })
-    
-  }
-  state = {
-
-  }
-  componentDidMount() {
-    
-    
+  handleClick = (details) => {
+    console.log(details, 'details')
+    this.props.handleClick(details)
   }
   render() {
-    const { name, poster, actors, grade, region, time, details  } = this.props
+    const { name, poster, actors, grade, region, time, details, handleClick  } = this.props
     return (
-      <div className='filmItem' onClick={() => this.handleClick2(details)}>
+      <div className='filmItem' onClick={handleClick(details)}>
         <img src={poster} alt={poster} />
         <div className='film-info'>
           <h4>{name}</h4>
